@@ -1,5 +1,7 @@
-#todo Make that a unit test?
-Feature: Produce a single child file
+Feature: Child record
+  In order to print a record
+  As a staff member
+  I can consult a child personal information
 
   Background: Child is registered
     Given a child registered with:
@@ -13,7 +15,7 @@ Feature: Produce a single child file
       | public notes  | Frequently puts forks in electric plugs |
       | private notes | Father can't approach                   |
 
-  Scenario: Staff consults a child file and sees the child information
+  Scenario: Staff member consults a child record and sees the child's personal information
     When I consult "George" "Orwell"'s file
     And I see that his name is "George" "Orwell"
     And I see that his birth date is "23 March 2007"

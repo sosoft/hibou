@@ -1,4 +1,7 @@
-Feature: Consulting the schedule
+Feature: Bookings schedule
+  In order to schedule working hours
+  As a staff member
+  I can view the bookings that are scheduled day by day
 
  Background: Children are registered
    Given these children are registered
@@ -7,7 +10,7 @@ Feature: Consulting the schedule
      |Bill      |Davis    |
      |Roger     |Rabbit   |
 
- Scenario: Staff consults the schedule of the next few days and sees the existing bookings
+ Scenario: Staff member consults today's schedule and sees the bookings for the day
    Given the following bookings
      |name  |date      |period|
      |George|2010-12-01|am    |
@@ -23,5 +26,3 @@ Feature: Consulting the schedule
    And today's pm schedule is
      |name         |
      |George Orwell|
-
-  #todo Scenario: Staff consults the schedule and sees there is no booking
