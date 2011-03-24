@@ -7,7 +7,7 @@ module NewChildFilePage
   end
 
   def register_child(child)
-    with_scope('#new_child') do
+    within('#new_child') do
       fill_in 'child_first_name', :with => child['first name']
       fill_in 'child_last_name', :with => child['last name']
       select_child_birth_date(Date.parse(child['birth date']))
