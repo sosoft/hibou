@@ -21,6 +21,14 @@ describe Booking do
     it "is considered invalid without a payment method" do
       Booking.make(:payment_method => '').should_not be_valid
     end
+
+    it "is considered invalid if a booking of the same child already exists for the time slot" do
+      child = Child.make!
+      am_period = 'AM'
+
+      Booking.make!(:child => child, :period => am_period)
+      Booking.make(:child => child, :period => am_period).should_not be_valid
+    end
   end
 
   describe "when there are existing bookings" do

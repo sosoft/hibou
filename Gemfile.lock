@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/koppen/hassle.git
-  revision: a08c757bce033cebc7ef8a4a3a831127afcb956a
+  revision: 97512c65f4c6fa34a4d4e284c416e8e6ebecbd44
   specs:
     hassle (0.0.1)
       haml
@@ -8,9 +8,10 @@ GIT
 
 GIT
   remote: git://github.com/sandal/pdf-inspector.git
-  revision: f9bf220e7bd0c89141753165337c2320d6a79f68
+  revision: c025ede745159cd29ae104fed41bd32a7619f732
   specs:
-    pdf-inspector (0.7.99)
+    pdf-inspector (1.0.0)
+      pdf-reader (>= 0.9.0)
 
 GEM
   remote: http://rubygems.org/
@@ -44,10 +45,10 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    arel (2.0.6)
-    bcrypt-ruby (2.1.2)
+    arel (2.0.8)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
-    capybara (0.4.0)
+    capybara (0.4.1.2)
       celerity (>= 0.7.9)
       culerity (>= 0.2.4)
       mime-types (>= 1.16)
@@ -55,9 +56,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
-      xpath (~> 0.1.2)
-    celerity (0.8.5)
-    childprocess (0.1.4)
+      xpath (~> 0.1.3)
+    celerity (0.8.8)
+    childprocess (0.1.7)
       ffi (~> 0.6.3)
     chronic (0.3.0)
     compass (0.10.6)
@@ -71,24 +72,24 @@ GEM
       term-ansicolor (~> 1.0.5)
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
-    culerity (0.2.12)
-    database_cleaner (0.6.0)
-    devise (1.1.5)
+    culerity (0.2.15)
+    database_cleaner (0.6.3)
+    devise (1.1.7)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    faker (0.3.1)
+    faker (0.9.5)
+      i18n (~> 0.4)
     ffi (0.6.3)
       rake (>= 0.8.7)
-    formtastic (1.2.2)
+    formtastic (1.2.3)
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
-      i18n (>= 0.4.0)
-    gherkin (2.3.2)
+      i18n (~> 0.4)
+    gherkin (2.3.3)
       json (~> 1.4.6)
-      term-ansicolor (~> 1.0.5)
     haml (3.0.25)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -97,16 +98,16 @@ GEM
       railties (~> 3.0)
     hpricot (0.8.3)
     i18n (0.4.2)
-    jquery-rails (0.2.5)
+    jquery-rails (0.2.7)
       rails (~> 3.0)
       thor (~> 0.14.4)
     json (1.4.6)
-    json_pure (1.4.6)
+    json_pure (1.5.1)
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
     machinist (2.0.0.beta2)
-    mail (2.2.12)
+    mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -126,7 +127,7 @@ GEM
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
-    rack-test (0.5.6)
+    rack-test (0.5.7)
       rack (>= 1.0)
     rails (3.0.3)
       actionmailer (= 3.0.3)
@@ -143,51 +144,54 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     rcov (0.9.9)
-    rspec (2.2.0)
-      rspec-core (~> 2.2)
-      rspec-expectations (~> 2.2)
-      rspec-mocks (~> 2.2)
-    rspec-core (2.2.1)
-    rspec-expectations (2.2.0)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.1)
+    rspec-expectations (2.5.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.2.0)
-    rspec-rails (2.2.1)
+    rspec-mocks (2.5.0)
+    rspec-rails (2.5.0)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
       railties (~> 3.0)
-      rspec (~> 2.2.0)
+      rspec (~> 2.5.0)
     rspec-rails-matchers (0.2.1)
     ruby_parser (2.0.5)
       sexp_processor (~> 3.0)
     rubyzip (0.9.4)
-    selenium-webdriver (0.1.1)
-      childprocess (= 0.1.4)
+    selenium-webdriver (0.1.3)
+      childprocess (~> 0.1.5)
       ffi (~> 0.6.3)
       json_pure
       rubyzip
     sexp_processor (3.0.5)
     spork (0.8.4)
-    sqlite3-ruby (1.3.2)
+    sqlite3 (1.3.3)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
     term-ansicolor (1.0.5)
     thor (0.14.6)
     timecop (0.3.5)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.23)
+    tzinfo (0.3.24)
     validation_reflection (1.0.0)
     warden (1.0.3)
       rack (>= 1.0.0)
-    webrat (0.7.2)
+    webrat (0.7.3)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    xpath (0.1.2)
+    xpath (0.1.3)
       nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder (>= 2.1.2)
   capybara
   chronic
   compass (>= 0.10.6)
@@ -205,7 +209,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   machinist (>= 2.0.0.beta2)
-  pdf-inspector (= 0.7.99)!
+  pdf-inspector (>= 0.7.99)!
   pdf-reader
   prawn (= 0.8.4)
   rails (= 3.0.3)

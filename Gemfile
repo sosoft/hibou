@@ -46,6 +46,7 @@ gem 'devise'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem "rspec-rails", ">= 2.2.0"
+  gem 'builder', ">= 2.1.2"
 end
 
 group :test do
@@ -63,5 +64,5 @@ group :test do
   gem 'launchy'
   gem 'rcov'
   gem 'rspec-rails-matchers'
-  gem 'pdf-inspector', '0.7.99', :git => 'git://github.com/sandal/pdf-inspector.git'
+  gem 'pdf-inspector', '>=0.7.99', :git => 'git://github.com/sandal/pdf-inspector.git'
 end
